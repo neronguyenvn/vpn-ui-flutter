@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
-import 'package:vpn_ui_flutter/ui/button.dart';
-import 'package:vpn_ui_flutter/ui/edit_text.dart';
-import 'login_viewmodel.dart';
+import 'package:vpn_ui_flutter/ui/reuse/button.dart';
+import 'package:vpn_ui_flutter/ui/reuse/edit_text.dart';
+import 'package:vpn_ui_flutter/ui/views/login/login_viewmodel.dart';
 
 class LoginView extends StatelessWidget {
+  const LoginView({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<LoginViewModel>.nonReactive(
@@ -35,13 +37,14 @@ class LoginView extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 48,
                         color: Color(0xFF828282),
-                        fontWeight: FontWeight.bold),
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 5),
                   )),
                 ),
                 Padding(
                   padding: EdgeInsets.only(bottom: 39),
                   child: Text(
-                    model.logIntoYourAccount,
+                    model.logInDescription,
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -49,11 +52,10 @@ class LoginView extends StatelessWidget {
                 Container(child: _passwordEditText),
                 Container(child: _loginButton),
                 GestureDetector(
-                  onTap: model.forgotTextOnTap,
+                  onTap: model.navToForgot,
                   child: Text(
                     model.forgotText,
-                    style: TextStyle(
-                        fontSize: 14, decoration: TextDecoration.underline),
+                    style: TextStyle(decoration: TextDecoration.underline),
                   ),
                 )
               ],

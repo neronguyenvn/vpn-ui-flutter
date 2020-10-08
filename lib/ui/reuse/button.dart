@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-
-const _figmaWidth = 375;
+import 'package:vpn_ui_flutter/ui/reuse/width_ratio.dart';
 
 class Button extends StatelessWidget {
   final String text;
-  final double bottomPading;
+  double bottomPading;
   final VoidCallback onTap;
 
-  const Button({@required this.text, this.bottomPading, this.onTap})
+  Button({@required this.text, this.bottomPading, this.onTap})
       : assert(text != null);
 
   @override
   Widget build(BuildContext context) {
-    final _widthRatio = MediaQuery.of(context).size.width / _figmaWidth;
+    final _widthRatio = widthRatio(context);
+    bottomPading = (bottomPading == null) ? 0 : bottomPading;
     return Container(
       width: 273 * _widthRatio,
       child: Padding(
@@ -20,8 +20,7 @@ class Button extends StatelessWidget {
         child: RaisedButton(
           textColor: Color(0xFFFFFFFF),
           color: Color(0xFF525252),
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(6)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
           onPressed: onTap,
           child: Text(
             text,
