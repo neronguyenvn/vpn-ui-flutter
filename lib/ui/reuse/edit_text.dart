@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vpn_ui_flutter/ui/reuse/width_ratio.dart';
+import 'package:vpn_ui_flutter/app/width_ratio.dart';
 
 class EditText extends StatelessWidget {
   final String label;

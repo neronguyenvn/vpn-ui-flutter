@@ -31,8 +31,8 @@ class ActivationCodeViewModel extends BaseViewModel {
 
   String get resendText => _resendText;
 
-  void navToReset() {
-    _navigationService.navigateTo(Routes.resetPasswordRoute);
+  Future navToReset() async {
+    await _navigationService.navigateTo(Routes.resetPasswordRoute);
   }
 
   Future resendOnTap() async {}

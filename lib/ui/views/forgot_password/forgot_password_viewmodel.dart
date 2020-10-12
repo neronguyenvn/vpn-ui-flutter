@@ -26,6 +26,6 @@ class ForgotPasswordViewModel extends BaseViewModel {
   }
 
   Future navToActivation() async {
-    _navigationService.navigateTo(Routes.activationCodeRoute);
+    await _navigationService.navigateTo(Routes.activationCodeRoute);
   }
 }

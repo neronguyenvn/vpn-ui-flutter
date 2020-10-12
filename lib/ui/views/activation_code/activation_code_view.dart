@@ -3,7 +3,7 @@ import 'package:stacked/stacked.dart';
 import 'package:vpn_ui_flutter/ui/reuse/button.dart';
 import 'package:vpn_ui_flutter/ui/reuse/edit_text.dart';
 import 'package:vpn_ui_flutter/ui/views/activation_code/activation_code_viewmodel.dart';
-import 'package:vpn_ui_flutter/ui/reuse/width_ratio.dart';
+import 'package:vpn_ui_flutter/app/width_ratio.dart';
 
 class ActivationCodeView extends StatelessWidget {
   const ActivationCodeView({Key key}) : super(key: key);

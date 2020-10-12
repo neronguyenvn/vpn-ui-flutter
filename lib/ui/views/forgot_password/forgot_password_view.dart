@@ -4,7 +4,7 @@ import 'package:stacked/stacked.dart';
 import 'package:vpn_ui_flutter/ui/reuse/button.dart';
 import 'package:vpn_ui_flutter/ui/reuse/edit_text.dart';
 import 'package:vpn_ui_flutter/ui/views/forgot_password/forgot_password_viewmodel.dart';
-import 'package:vpn_ui_flutter/ui/reuse/width_ratio.dart';
+import 'package:vpn_ui_flutter/app/width_ratio.dart';
 
 class ForgotPasswordView extends StatelessWidget {
   const ForgotPasswordView({Key key}) : super(key: key);
